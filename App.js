@@ -15,7 +15,7 @@ function App() {
 export default App
 
 //test comment
-//Something lioke this , edit you mean 
+//Something like this , edit you mean 
 //Tanvir
 //Weifeng
 // Yunis was here
