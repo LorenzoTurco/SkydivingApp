@@ -1,21 +1,26 @@
-import React from "react"
+import React from "react";
+import Home from "./Home";
+import WeatherPage from "./WeatherPage";
+import {Route, Link} from "react-router-dom";
 
 
-function App() {
-    
-    
-    return (
+  function App(){
 
-        <div></div>
-        
+    return(
 
-    )
-}
+      <div>
 
-export default App
+        <Route exact path = "/" component={Home} />
+        <Route exact path = "/WeatherPage" component={WeatherPage} />
 
-//test comment
-//Something like this , edit you mean 
-//Tanvir
-//Weifeng
-// Yunis was here
+
+      </div>
+
+
+      );
+
+    }
+  export default App;
+
+
+
