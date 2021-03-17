@@ -1,9 +1,10 @@
 # FOR GUI GROUP, SET API KEY IN ORDER TO MAKE WORK
-1) Get an api key from openweathermap
-2) Create a file called ".env" and place it in the root folder, that means on the same level as where package.json is on.
-3) Inside ".env" write out
-    REACT_APP_API_KEY = *insert your api key here*
-4) Save
+
+1. Get an api key from openweathermap
+2. Create a file called ".env" and place it in the root folder, that means on the same level as where package.json is on.
+3. Inside ".env" write out
+   REACT_APP_API_KEY = _insert your api key here_
+4. Save
 
 # Getting Started with Create React App
 
@@ -13,7 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start` 
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

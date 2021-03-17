@@ -4,25 +4,24 @@ import { useHistory } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+// Search bar for getting the weather forecast for locations
+// Currently using 5 day/3 hour forecast from openweathermap API
 const Searchbar = () => {
     const [location, setLocation] = useState('')
-    // const [weatherData, setWeatherData] = useState([])
     const history = useHistory()
 
     const onSubmit = async (e) => {
         e.preventDefault()
 
-        if(!location) {
+        if (!location) {
             return
         }
 
         const tempData = await getLocationWeather(location)
 
-        if(tempData.cod==="200"){
+        if (tempData.cod === "200") {
             console.log("Valid location")
-            // setWeatherData([tempData])
             console.log(tempData.list)
-            // console.log(weatherData)
             history.push({
                 pathname: '/weatherpage',
                 state: tempData
@@ -43,11 +42,11 @@ const Searchbar = () => {
 
     return (
         <form className="searchbar" onSubmit={onSubmit}>
-            <input 
+            <input
                 style={{}}
                 value={location}
                 placeholder={"Search location"}
-                onChange = {(e) => setLocation(e.target.value)}
+                onChange={(e) => setLocation(e.target.value)}
             />
             <input
                 type="image"
