@@ -1,6 +1,12 @@
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Home from './pages/Home'
+import Rainfall from './pages/Rainfall'
+import Favourites from './pages/Favourites'
+import RecGear from './pages/RecGear'
+import RecLocation from './pages/RecLocation'
+import Settings from './pages/Settings'
+import Weather from './pages/Weather'
 import Error from './pages/Error'
 
 function App() {
@@ -8,28 +14,24 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+        <Route path="/" exact component={Home}/>
         <Route path="/rainfallmap">
-          {/* Insert rainfall page */}
-          <Home />
+          <Rainfall />
         </Route>
         <Route path="/recommendedgear">
-          {/* Insert recommended gear page */}
-          <Home />
+          <RecGear />
         </Route>
         <Route path="/favourites">
-          {/* Insert favourites page */}
-          <Home />
+          <Favourites />
         </Route>
         <Route path="/recommendedlocation">
-          {/* Insert recommended location page */}
-          <Home />
-          </Route>
+          <RecLocation />
+        </Route>
         <Route path="/settings">
-          {/* Insert settings page */}
-          <Home />
+          <Settings />
+        </Route>
+        <Route path="/weatherpage">
+          <Weather />
         </Route>
         <Route component={Error}/>
       </Switch>
