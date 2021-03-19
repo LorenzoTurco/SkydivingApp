@@ -4,37 +4,29 @@ import { useHistory } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-// Search bar for getting the weather forecast for locations
-// Currently using 5 day/3 hour forecast from openweathermap API
+// Allows searches from other pages to get the weather
 const Searchbar = () => {
     const [location, setLocation] = useState('')
     const history = useHistory()
 
     const onSubmit = async (e) => {
         e.preventDefault()
-
         if (!location) {
             return
         }
-
         const tempData = await getLocationWeather(location)
-
         if (tempData.cod === "200") {
-            console.log("Valid location")
-            console.log(tempData.list)
             history.push({
                 pathname: '/weatherpage',
-                state: tempData
+                weatherData: tempData
             })
         } else {
-            console.log("Invalid location")
             setLocation('')
         }
-
     }
 
     const getLocationWeather = async (location) => {
-        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}`
+        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&unit=metric`
         const result = await fetch(url)
         const data = await result.json()
         return data
@@ -54,7 +46,6 @@ const Searchbar = () => {
                 style={{ maxWidth: "20px" }}
                 alt="Submit"
             />
-            {/* <input type="submit"/> */}
         </form>
     )
 }
