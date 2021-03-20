@@ -1,0 +1,65 @@
+body{
+    background: #81fcc5;
+
+}
+.menu{
+    float:left;
+    font-size: 10vh;
+    margin: 5vw;
+    padding: 2vh;
+    margin-top: -2vh;
+}
+
+.Nav{
+    font-size:3vh;
+    margin: 7vh 3vw;
+}
+
+.text{
+    padding-left: 4vw;
+    padding-bottom: 4vw;
+    text-decoration: none;
+}
+
+.bar{
+    position:relative;
+}
+
+.btn{
+    float: left;
+ 
+}
+
+.leftimg{
+    float: left;
+    width: 16px;
+    margin: 6.7vh 15vw;
+    }
+
+.search{
+    position: absolute;
+    left:0px;
+    z-index:-1;
+    width:45vw;
+    height:5vh;
+    padding-left: 6vw;
+    border:1pt solid black;
+    margin: 5vh 13vw;
+}
+
+.searchButton{
+    position: absolute;
+    right:18.5pt;
+    width:16vw;
+    height:5.6vh;
+    margin: 5vh;
+}
+
+.setting{
+    position:relative;
+	bottom:5vh;
+	right:0vw;
+	float:right;
+
+}
+
