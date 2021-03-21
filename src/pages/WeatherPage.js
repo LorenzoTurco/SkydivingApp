@@ -10,6 +10,21 @@ import React, {useState}from 'react';
   function WeatherPage() {
     const [query, setQuery] = useState('');
     const [weather, setWeather] = useState({});
+
+  function setData(){
+
+    let myObj_serialized = JSON.stringify(weather);
+
+    localStorage.setItem("myObj", myObj_serialized);
+
+  }
+
+  function getData(){
+    
+    let data = localStorage.getItem('location');
+    console.log(data)
+  }
+ 
   
     const search = evt => {
       if (evt.key === "Enter") {
@@ -60,7 +75,23 @@ import React, {useState}from 'react';
               </div>
               <div className="weather">{weather.weather[0].main}</div>
             </div>
+
+
+            <button onClick ={() =>{
+              
+              setData()
+              
+              getData()
+              
+            }}>clickME</button>
+            
+
+
+
+
           </div>
+
+          
           ) : ('')}
         </main>
       </div>
