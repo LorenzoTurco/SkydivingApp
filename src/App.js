@@ -32,7 +32,7 @@ function App() {
         <Route path="/settings">
           <Settings />
         </Route>
-        <Route path="/weatherpage">
+        <Route path="/weatherpage/:searchLocation">
           <Weather />
 			    {/* <WeatherPage /> */}
         </Route>

@@ -16,19 +16,27 @@ const DisplayData = (data) => {
     // Each item in array of 8 has 4 elements: temp, wind direction, wind speed, cloud coverage (%)
     const getDataPerDay = () => {
         let directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
-        let tempData = [[],[],[],[],[],[],[],[]]
+        let tempData = [[],[],[],[],[],[],[],[],[]]
         let currentHour = 0
         let windDirection
         for (let i=0; i < data.data.list.length; i++) {
             windDirection = parseInt(data.data.list[i].wind.deg)
-            windDirection = [Math.round(((windDirection %= 360) < 0 ? windDirection + 360 : windDirection) / 45) % 8];
+            windDirection = [Math.round(((windDirection %= 360) < 0 ? windDirection + 360 : windDirection) / 45) % 8]
             tempData[currentHour] = {
-                temp: data.data.list[i].main.temp,
+                temp: parseInt(data.data.list[i].main.temp),
                 windDirection: directions[windDirection],
                 windSpeed: parseInt(data.data.list[i].wind.speed),
                 cloudCover: data.data.list[i].clouds.all
             }
             if((i+1)%8 === 0) {
+                if(i < 8) {
+                    tempData[9] = "Today"
+                } else if (i < 16) {
+                    tempData[9] = "Tomorrow"
+                } else {
+                    tempData[9] = (i+1)/8 + " days ahead"
+                }
+
                 dataPerDay.push(tempData.slice(0))
                 currentHour = 0
             } else {
@@ -52,6 +60,7 @@ const DisplayData = (data) => {
         for (let i=0; i < 5; i++) {
             tempSlides.push(
                 <SwiperSlide key={`slide-${i*2}`}>
+                <div style={Column}>{dataPerDay[i][9]}</div>
                     <div style={MultiColumn}>
                         <div style={Column}>
                             {labels[0]} <br/>
@@ -86,6 +95,7 @@ const DisplayData = (data) => {
             )
             tempSlides.push(
                 <SwiperSlide key={`slide-${i*2+1}`}>
+                    <div style={Column}>{dataPerDay[i][9]}</div>
                     <div style={MultiColumn}>
                         <div style={Column}>
                             {labels[4]} <br/>
@@ -147,6 +157,7 @@ const DisplayData = (data) => {
             >
                 {slides}
             </Swiper>
+            <pre>{JSON.stringify(data, 0, 2)}</pre>
         </>
     )
 }
