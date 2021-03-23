@@ -1,10 +1,28 @@
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import IframeComponent from '../components/iframecomp';
+import '../index.css';
 
-const Rainfall = () => {
+
+class RainfallMap extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      name: 'React'
+    };
+  }
+
+
+  render() {
     return (
-        <div>
-
-        </div>
-    )
+      <div>
+        <IframeComponent src="https://openweathermap.org/weathermap?basemap=map&cities=false&layer=radar&lat=30&lon=-20&zoom=3" height="100%" width="100%"/>
+      </div>
+    );
+  }
 }
 
-export default Rainfall
+render(<RainfallMap />, document.getElementById('root'));
+
+export default RainfallMap
