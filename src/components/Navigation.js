@@ -1,5 +1,7 @@
 import NavOption from './NavOption'
 import NavOption1 from './NavOption_1'
+import NavOption2 from './NavOption_2'
+import NavOption3 from './NavOption_3'
 
 // Importing images
 import GearIcon from '../assets/gear.png'
@@ -17,7 +19,7 @@ const Navigation = () => {
                     text="Rainfall Map" 
                     imgsrc={RainIcon}
                 />
-                <NavOption 
+                <NavOption3 
                     url="recommendedgear" 
                     text="Recommended Gear" 
                     imgsrc={GearIcon}
@@ -27,19 +29,16 @@ const Navigation = () => {
                     text="Favourites" 
                     imgsrc={BookmarkIcon}
                 />
-                <NavOption 
+                <NavOption2
                     url="recommendedlocation"
                     text="Recommended Locations" 
                     imgsrc={LocationIcon}
                 />
             </nav>
-            <div className="setting">
                 <NavOption1 
                     url="settings"
                     imgsrc={SettingsIcon}
-                    style={{botton:0, right:0}}
                 />
-            </div>
         </div>
         
 

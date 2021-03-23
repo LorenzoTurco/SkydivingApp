@@ -1,41 +1,33 @@
+  
 import SearchIcon from '../assets/search.png'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+// Allows searches from other pages to get the weather
 const Searchbar = () => {
     const [location, setLocation] = useState('')
-    // const [weatherData, setWeatherData] = useState([])
     const history = useHistory()
 
     const onSubmit = async (e) => {
         e.preventDefault()
-
-        if(!location) {
+        if (!location) {
             return
         }
-
         const tempData = await getLocationWeather(location)
-
-        if(tempData.cod==="200"){
-            console.log("Valid location")
-            // setWeatherData([tempData])
-            console.log(tempData.list)
-            // console.log(weatherData)
+        if (tempData.cod === "200") {
             history.push({
-                pathname: '/weatherpage',
-                state: tempData
+                pathname: '/weatherpage/'+tempData.city.name,
+                weatherData: tempData
             })
         } else {
-            console.log("Invalid location")
             setLocation('')
         }
-
     }
 
     const getLocationWeather = async (location) => {
-        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}`
+        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&unit=metric`
         const result = await fetch(url)
         const data = await result.json()
         return data
@@ -43,21 +35,15 @@ const Searchbar = () => {
 
     return (
         <form className="searchbar" onSubmit={onSubmit}>
-            <div style={{ position: "relative", height: "30px",width:"96%",marginLeft:"2%"}}>
-                <img  src={SearchIcon} className="leftimg"  alt=""/>
-                <input  className="search" 
+            <div className="mark">
+                <img  src={SearchIcon} className="leftimg"  alt="" style={{width:"3vh", height:"3vh"}}/>
+                <input className = "search"
                     style={{}}
                     value={location}
                     placeholder={"Search location"}
-                    onChange = {(e) => setLocation(e.target.value)}
-                />
-                <input className = "searchButton"
-                    type="button"
-                    value={"Search"}
-                    alt="Submit"
+                    onChange={(e) => setLocation(e.target.value)}
                 />
             </div>
-            {/* <input type="submit"/> */}
         </form>
     )
 }

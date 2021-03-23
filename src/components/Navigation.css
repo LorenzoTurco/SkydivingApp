@@ -1,5 +1,10 @@
 body{
-    background: #81fcc5;
+    position:absolute;
+    padding: 0;
+    margin: 0;
+    position:absolute;
+    background: url(background4.jpg) no-repeat;
+    z-index: -10;
 
 }
 .menu{
@@ -13,12 +18,28 @@ body{
 .Nav{
     font-size:3vh;
     margin: 7vh 3vw;
+    text-shadow: 1px 2px black;
+}
+
+.Nav_1{
+    font-size:2.11vh;
+    margin: 7vh 3vw;
+    text-shadow: 1px 2px black;
+}
+
+.Nav_2{
+    font-size:2.61vh;
+    margin: 7vh 3vw;
+    text-shadow: 1px 2px rgb(100, 10, 10);
 }
 
 .text{
     padding-left: 4vw;
     padding-bottom: 4vw;
     text-decoration: none;
+    color:rgb(224, 68, 214);
+    font-weight: bold;
+    
 }
 
 .bar{
@@ -32,34 +53,50 @@ body{
 
 .leftimg{
     float: left;
-    width: 16px;
-    margin: 6.7vh 15vw;
-    }
+    width: 2vw;
+    height: 2vh;
+    margin: 6.5vh 16vw;
+}
+
+.leftimg:focus{
+    height:0pt;
+    width:0pt;
+    background-color: red;
+}
 
 .search{
     position: absolute;
     left:0px;
     z-index:-1;
-    width:45vw;
+    width:70vw;
     height:5vh;
-    padding-left: 6vw;
+    border-radius: 15pt;
+    text-align:center;
     border:1pt solid black;
     margin: 5vh 13vw;
 }
 
-.searchButton{
-    position: absolute;
-    right:18.5pt;
-    width:16vw;
-    height:5.6vh;
-    margin: 5vh;
+.search:focus{
+    outline:none;
 }
 
 .setting{
-    position:relative;
+    position:fixed;
 	bottom:5vh;
-	right:0vw;
+	right:5vw;
 	float:right;
-
+    height:5vh;
 }
 
+.mark{
+    position: relative;
+     height: 30px;
+     width:96%;
+     margin-left:2%;
+}
+
+.mark img:focus{
+    height:0pt;
+    width:0pt;
+    background-color: red;
+}
