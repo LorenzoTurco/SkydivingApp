@@ -3,6 +3,7 @@ import { useHistory, useParams } from 'react-router-dom'
 import Searchbar from '../components/Searchbar'
 import DisplayData from '../components/DisplayData'
 import AddFav from '../components/AddFav'
+import BackButton from '../components/BackButton'
 
 const Weather = () => {
     const history = useHistory()
@@ -16,6 +17,7 @@ const Weather = () => {
     return (
         <div>
             <Searchbar />
+            <BackButton />
             <h1> {data.city.name} </h1>
             <AddFav
                 locationName={history.location.state.city.name}
