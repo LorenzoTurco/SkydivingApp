@@ -13,8 +13,8 @@ code {
 }
 
 .fullheight{
-  height: 90vh;
-  width: 47vh;
+ height: 105vh;
+ width: 100vw;
  display: inline-block;
  margin: 0 auto;
  margin-top: -65px;
