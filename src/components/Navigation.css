@@ -1,0 +1,104 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url(background4.jpg) no-repeat;
+    z-index: -10;
+
+}
+.menu{
+    float:left;
+    font-size: 10vh;
+    margin: 5vw;
+    padding: 2vh;
+    margin-top: -2vh;
+}
+
+.Nav{
+    font-size:3vh;
+    margin: 7vh 3vw;
+    text-shadow: 1px 2px black;
+}
+
+.Nav_1{
+    font-size:2.11vh;
+    margin: 7vh 3vw;
+    text-shadow: 1px 2px black;
+}
+
+.Nav_2{
+    font-size:2.61vh;
+    margin: 7vh 3vw;
+    text-shadow: 1px 2px rgb(100, 10, 10);
+}
+
+.text{
+    padding-left: 4vw;
+    padding-bottom: 4vw;
+    text-decoration: none;
+    color:rgb(224, 68, 214);
+    font-weight: bold;
+    
+}
+
+.bar{
+    position:relative;
+}
+
+.btn{
+    float: left;
+ 
+}
+
+.leftimg{
+    float: left;
+    width: 2vw;
+    height: 2vh;
+    margin: 6.5vh 16vw;
+}
+
+.leftimg:focus{
+    height:0pt;
+    width:0pt;
+    background-color: red;
+}
+
+.search{
+    position: absolute;
+    left:0px;
+    z-index:-10;
+    width:70vw;
+    height:5vh;
+    border-radius: 15pt;
+    text-align:center;
+    border:1pt solid black;
+    margin: 5vh 13vw;
+}
+
+.search:focus{
+    outline:none;
+}
+
+.setting{
+    position:fixed;
+	bottom:5vh;
+	right:5vw;
+	float:right;
+    height:5vh;
+}
+
+.mark{
+    position: relative;
+     height: 30px;
+     width:96%;
+     margin-left:2%;
+}
+
+.mark img:focus{
+    height:0pt;
+    width:0pt;
+    background-color: red;
+}
+
+#back::-webkit-input-placeholder{
+    color:white;
+}
