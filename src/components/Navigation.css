@@ -1,10 +1,13 @@
+
 body{
     padding: 0;
     margin: 0;
-    background: url(background4.jpg) no-repeat;
+    background: url(background4.png) no-repeat;
+    background-size: cover;
     z-index: -10;
-
+    min-height: 100vh;
 }
+
 .menu{
     float:left;
     font-size: 10vh;
