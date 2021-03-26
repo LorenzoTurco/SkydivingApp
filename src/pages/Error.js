@@ -1,9 +1,12 @@
-
+import BackButton from '../components/BackButton'
 const Error = () => {
     return (
-        <h1>
-            Invalid page url
-        </h1>
+        <>
+            <h1>
+                Invalid page url
+            </h1>
+            <BackButton />
+        </>
     )
 }
 
