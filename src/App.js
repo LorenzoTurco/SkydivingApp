@@ -7,8 +7,6 @@ import RecGear from './pages/RecGear'
 import RecLocation from './pages/RecLocation'
 import Settings from './pages/Settings'
 import Weather from './pages/Weather'
-// Lorenzo's draft 1 of weather page
-import WeatherPage from './pages/WeatherPage'
 import Error from './pages/Error'
 
 function App() {
@@ -34,7 +32,6 @@ function App() {
         </Route>
         <Route path="/weatherpage/:searchLocation">
           <Weather />
-			    {/* <WeatherPage /> */}
         </Route>
         <Route component={Error} />
       </Switch>

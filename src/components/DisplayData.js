@@ -175,12 +175,11 @@ export default DisplayData
 
 const Column = {
     textAlign: "center",
-    padding: "5px"
 }
 
 const MultiColumn = {
     columnCount: "4",
-    height: "9.5em"
+    height: "11em"
 }
 
 const imgIcon = {
