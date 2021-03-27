@@ -32,20 +32,19 @@ const Searchbar = () => {
     }
 
     return (
-        <form className="search" onSubmit={onSubmit}>
-            <input 
+        <form className="searchbar" onSubmit={onSubmit}>
+            <input className = "search"
                 style={{}}
                 value={location}
                 placeholder={"Search location"}
-                onChange = {(e) => setLocation(e.target.value)}
+                onChange={(e) => setLocation(e.target.value)}
             />
-            <input
+            <input className="leftimg"
                 type="image"
                 src={SearchIcon}
                 style={{ maxWidth: "20px" }}
                 alt="Submit"
             />
-            {/* <input type="submit"/> */}
         </form>
     )
 }
