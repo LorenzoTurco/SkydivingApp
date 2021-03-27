@@ -1,4 +1,8 @@
 import NavOption from './NavOption'
+import NavOption1 from './NavOption_1'
+import NavOption2 from './NavOption_2'
+import NavOption3 from './NavOption_3'
+import './Navigation.css'
 
 // Importing images
 import GearIcon from '../assets/gear.png'
@@ -9,33 +13,36 @@ import SettingsIcon from '../assets/setting.png'
 
 const Navigation = () => {
     return (
-        <nav>
-            <NavOption
-                url="rainfallmap"
-                text="Rainfall Map"
-                imgsrc={RainIcon}
-            />
-            <NavOption
-                url="recommendedgear"
-                text="Recommended Gear"
-                imgsrc={GearIcon}
-            />
-            <NavOption
-                url="favourites"
-                text="Favourites"
-                imgsrc={BookmarkIcon}
-            />
-            <NavOption
-                url="recommendedlocation"
-                text="Recommended Locations"
-                imgsrc={LocationIcon}
-            />
-            <NavOption
-                url="settings"
-                text="Settings"
-                imgsrc={SettingsIcon}
-            />
-        </nav>
+        <div>
+            <nav className="menu">
+                <NavOption 
+                    url="rainfallmap"
+                    text="Rainfall Map" 
+                    imgsrc={RainIcon}
+                />
+                <NavOption3 
+                    url="recommendedgear" 
+                    text="Recommended Gear" 
+                    imgsrc={GearIcon}
+                />
+                <NavOption 
+                    url="favourites" 
+                    text="Favourites" 
+                    imgsrc={BookmarkIcon}
+                />
+                <NavOption2
+                    url="recommendedlocation"
+                    text="Recommended Locations" 
+                    imgsrc={LocationIcon}
+                />
+            </nav>
+                <NavOption1 
+                    url="settings"
+                    imgsrc={SettingsIcon}
+                />
+        </div>
+        
+
     )
 }
 
