@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { useEffect } from 'react'
 import Home from './pages/Home'
 import Rainfall from './pages/Rainfall'
 import Favourites from './pages/Favourites'
@@ -10,6 +11,14 @@ import Weather from './pages/Weather'
 import Error from './pages/Error'
 
 function App() {
+
+  useEffect(() => {
+    let currentSettings = localStorage.getItem('settings')
+    if (currentSettings === null) {
+      localStorage.setItem('settings','Metric')
+    }
+
+  },[])
 
   return (
     <BrowserRouter>

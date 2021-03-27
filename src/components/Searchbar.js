@@ -25,7 +25,7 @@ const Searchbar = () => {
     }
 
     const getLocationWeather = async (location) => {
-        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&units=metric`
+        let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&units=${localStorage.getItem('settings')}`
         const result = await fetch(url)
         const data = await result.json()
         return data

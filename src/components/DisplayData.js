@@ -59,88 +59,101 @@ const DisplayData = (data) => {
     // Update the slides to display the data
     const updateSlides = () => {
         let tempSlides = []
+        let windUnit
+        let tempUnit
+        if (localStorage.getItem('settings') === 'Metric') {
+            windUnit = "m/s"
+            tempUnit = "C"
+        } else {
+            windUnit = "mph"
+            tempUnit = "F"
+        }
         for (let i=0; i < 5; i++) {
             tempSlides.push(
                 <SwiperSlide key={`slide-${i*2}`}>
-                <div className="date">
-                    <div style={Column}>{dataPerDay[i][9]}</div>
-                </div>
-                <div className="weatherData">
-                    <div style={MultiColumn}>
-                        <div style={Column}>
-                            {labels[0]} <br/>
-                            {dataPerDay[i][0].temp}&#176;C <br/>
-                            {dataPerDay[i][0].windDirection} <br/>
-                            {dataPerDay[i][0].windSpeed}mph<br/> 
-                            {dataPerDay[i][0].cloudCover}%<br/>
-                            <img style={imgIcon} src={dataPerDay[i][0].iconImgSrc}/>
-                        </div>
-                        <div style={Column}>
-                            {labels[1]} <br/>
-                            {dataPerDay[i][1].temp}&#176;C <br/>
-                            {dataPerDay[i][1].windDirection} <br/>
-                            {dataPerDay[i][1].windSpeed}mph<br/> 
-                            {dataPerDay[i][1].cloudCover}%<br/>
-                            <img style={imgIcon} src={dataPerDay[i][1].iconImgSrc}/>
-                        </div>
-                        <div style={Column}>
-                            {labels[2]} <br/>
-                            {dataPerDay[i][2].temp}&#176;C <br/>
-                            {dataPerDay[i][2].windDirection} <br/>
-                            {dataPerDay[i][2].windSpeed}mph<br/>
-                            {dataPerDay[i][2].cloudCover}%<br/>
-                            <img style={imgIcon} src={dataPerDay[i][2].iconImgSrc}/>
-                        </div>
-                        <div style={Column}>
-                            {labels[3]} <br/>
-                            {dataPerDay[i][3].temp}&#176;C <br/>
-                            {dataPerDay[i][3].windDirection} <br/>
-                            {dataPerDay[i][3].windSpeed}mph<br/>
-                            {dataPerDay[i][3].cloudCover}%<br/>
-                            <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
-                        </div>
-                    </div>
-                </div>
-                </SwiperSlide>
-            )
-            tempSlides.push(
-                <SwiperSlide key={`slide-${i*2+1}`}>
+                <div className="shadowBox">
                     <div className="date">
                         <div style={Column}>{dataPerDay[i][9]}</div>
                     </div>
                     <div className="weatherData">
                         <div style={MultiColumn}>
                             <div style={Column}>
-                                {labels[4]} <br/>
-                               {dataPerDay[i][4].temp}&#176;C <br/>
-                                {dataPerDay[i][4].windDirection} <br/>
-                                {dataPerDay[i][4].windSpeed}mph<br/> 
-                                {dataPerDay[i][4].cloudCover}%<br/>
-                                <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                {labels[0]} <br/>
+                                {dataPerDay[i][0].temp}&#176;{tempUnit} <br/>
+                                {dataPerDay[i][0].windDirection} <br/>
+                                {dataPerDay[i][0].windSpeed}{windUnit}<br/> 
+                                {dataPerDay[i][0].cloudCover}%<br/>
+                                <img style={imgIcon} src={dataPerDay[i][0].iconImgSrc}/>
                             </div>
                             <div style={Column}>
-                                {labels[5]} <br/>
-                                {dataPerDay[i][5].temp}&#176;C <br/>
-                                {dataPerDay[i][5].windDirection} <br/>
-                                {dataPerDay[i][5].windSpeed}mph<br/> 
-                                {dataPerDay[i][5].cloudCover}%<br/>
-                                <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                {labels[1]} <br/>
+                                {dataPerDay[i][1].temp}&#176;{tempUnit} <br/>
+                                {dataPerDay[i][1].windDirection} <br/>
+                                {dataPerDay[i][1].windSpeed}{windUnit}<br/> 
+                                {dataPerDay[i][1].cloudCover}%<br/>
+                                <img style={imgIcon} src={dataPerDay[i][1].iconImgSrc}/>
                             </div>
                             <div style={Column}>
-                                {labels[6]} <br/>
-                                {dataPerDay[i][6].temp}&#176;C <br/>
-                                {dataPerDay[i][6].windDirection}<br/>
-                                {dataPerDay[i][6].windSpeed}mph<br/> 
-                                {dataPerDay[i][6].cloudCover}%<br/>
-                                <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                {labels[2]} <br/>
+                                {dataPerDay[i][2].temp}&#176;{tempUnit} <br/>
+                                {dataPerDay[i][2].windDirection} <br/>
+                                {dataPerDay[i][2].windSpeed}{windUnit}<br/>
+                                {dataPerDay[i][2].cloudCover}%<br/>
+                                <img style={imgIcon} src={dataPerDay[i][2].iconImgSrc}/>
                             </div>
                             <div style={Column}>
-                                {labels[7]} <br/>
-                                {dataPerDay[i][7].temp}&#176;C <br/>
-                                {dataPerDay[i][7].windDirection}<br/>
-                                {dataPerDay[i][7].windSpeed}mph<br/>
-                                {dataPerDay[i][7].cloudCover}%<br/>
+                                {labels[3]} <br/>
+                                {dataPerDay[i][3].temp}&#176;{tempUnit} <br/>
+                                {dataPerDay[i][3].windDirection} <br/>
+                                {dataPerDay[i][3].windSpeed}{windUnit}<br/>
+                                {dataPerDay[i][3].cloudCover}%<br/>
                                 <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </SwiperSlide>
+            )
+            tempSlides.push(
+                <SwiperSlide key={`slide-${i*2+1}`}>
+                    <div className="shadowBox">
+                        <div className="date">
+                            <div style={Column}>{dataPerDay[i][9]}</div>
+                        </div>
+                        <div className="weatherData">
+                            <div style={MultiColumn}>
+                                <div style={Column}>
+                                    {labels[4]} <br/>
+                                    {dataPerDay[i][4].temp}&#176;{tempUnit} <br/>
+                                    {dataPerDay[i][4].windDirection} <br/>
+                                    {dataPerDay[i][4].windSpeed}{windUnit}<br/> 
+                                    {dataPerDay[i][4].cloudCover}%<br/>
+                                    <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                </div>
+                                <div style={Column}>
+                                    {labels[5]} <br/>
+                                    {dataPerDay[i][5].temp}&#176;{tempUnit} <br/>
+                                    {dataPerDay[i][5].windDirection} <br/>
+                                    {dataPerDay[i][5].windSpeed}{windUnit}<br/> 
+                                    {dataPerDay[i][5].cloudCover}%<br/>
+                                    <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                </div>
+                                <div style={Column}>
+                                    {labels[6]} <br/>
+                                    {dataPerDay[i][6].temp}&#176;{tempUnit} <br/>
+                                    {dataPerDay[i][6].windDirection}<br/>
+                                    {dataPerDay[i][6].windSpeed}{windUnit}<br/> 
+                                    {dataPerDay[i][6].cloudCover}%<br/>
+                                    <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                </div>
+                                <div style={Column}>
+                                    {labels[7]} <br/>
+                                    {dataPerDay[i][7].temp}&#176;{tempUnit} <br/>
+                                    {dataPerDay[i][7].windDirection}<br/>
+                                    {dataPerDay[i][7].windSpeed}{windUnit}<br/>
+                                    {dataPerDay[i][7].cloudCover}%<br/>
+                                    <img style={imgIcon} src={dataPerDay[i][3].iconImgSrc}/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -157,7 +170,7 @@ const DisplayData = (data) => {
     }, [data])
 
     return (
-        <>
+        <div>
             <Swiper
                 observer={true}
                 observeParents = {true}
@@ -176,7 +189,7 @@ const DisplayData = (data) => {
                 {slides}
             </Swiper>
             {/* <pre>{JSON.stringify(data, 0, 2)}</pre> */}
-        </>
+        </div>
     )
 }
 
