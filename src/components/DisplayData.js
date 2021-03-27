@@ -175,7 +175,7 @@ const DisplayData = (data) => {
             >
                 {slides}
             </Swiper>
-            <pre>{JSON.stringify(data, 0, 2)}</pre>
+            {/* <pre>{JSON.stringify(data, 0, 2)}</pre> */}
         </>
     )
 }
