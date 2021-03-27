@@ -31,7 +31,9 @@ const Settings = () => {
                 >
                     Change Unit:
                 </button>
-                {/* Simply lists the unit of measurement */}
+                {/* Simply lists the unit of measurement
+                    If you want can put inside the button. Doesn't matter where it is
+                    as long as it's there. */}
                 {measurement}
             </label>
             
