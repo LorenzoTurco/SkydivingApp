@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-//Set the position and size for the rainfall map
+/* Set the position and size for the rainfall map */
 .fullheight{
  height: 104.5vh;
  width: 100vw;
