@@ -48,15 +48,15 @@ const AddFav = (props) => {
 
     return (
         
-        existsAlready ? (
-            <input
+        existsAlready ? ( 
+            <input className="addFav"
             type="image"
             src={FullMark}
             style={{ maxWidth: "40px" }}
             onClick={onClickFav}
             alt="Submit"/>
         ) : (
-            <input
+            <input className="addFav"
             type="image"
             src={EmptyMark}
             style={{ maxWidth: "40px" }}
