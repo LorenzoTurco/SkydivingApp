@@ -12,9 +12,9 @@ const BackButton = () => {
 
     return (
         <input
+            className="backButton"
             type="image"
             src={backIcon}
-            style={{ maxWidth:"20px" }}
             onClick={onClick}
             alt="back"
         ></input>
