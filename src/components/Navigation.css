@@ -1,4 +1,4 @@
-//Set the background for all pages
+/* Set the background for all pages */
 body{
     padding: 0;
     margin: 0;
@@ -8,7 +8,7 @@ body{
     z-index: -10;
 }
 
-//Set the layout of the main function in the homepage  
+/* Set the layout of the main function in the homepage   */
 .menu{
     float:left;
     font-size: 10vh;
@@ -17,28 +17,26 @@ body{
     margin-top: 14vh;
 }
 
-//Do the font design for the function
+/* Do the font design for the function */
 .Nav{
     font-size:3vh;
     margin: 7vh 3vw;
     text-shadow: 1px 2px black;
 }
 
-//Do the font design for the function
 .Nav_1{
     font-size:2.11vh;
     margin: 7vh 3vw;
     text-shadow: 1px 2px black;
 }
 
-//Do the font design for the function
 .Nav_2{
     font-size:2.61vh;
     margin: 7vh 3vw;
     text-shadow: 1px 2px rgb(100, 10, 10);
 }
 
-//Style the text form in the homwpage 
+/* Style the text form in the homepage */
 .text{
     padding-left: 4vw;
     padding-bottom: 4vw;
@@ -48,12 +46,8 @@ body{
     
 }
 
-//Gibe the position for searchbar
-.bar{
-    position:relative;
-}
 
-//Set the position for the searchicon
+/* Search Bar Styling */
 .leftimg{
     position: absolute;
     margin-top:6.2vh;
@@ -61,7 +55,6 @@ body{
     z-index: 2;
 }
 
-//Style the searchbar
 .search{
     position: absolute;
     z-index:1;
@@ -75,12 +68,16 @@ body{
     font-weight:bold;
 }
 
-//Set outline to none for search bar when focus it 
+.bar{
+    position:relative;
+}
+
 .search:focus{
     outline:none;
 }
 
-//Set the location and size for setting function in homepage
+
+/* Set the location and size for setting function in homepage */
 .setting{
     position:fixed;
     bottom:5vh;
@@ -89,12 +86,12 @@ body{
     height:5vh;
 }
 
-//Set the colour of text in stakeholder in raimfall map page
+/* Set the colour of text in stakeholder in rainfall map page */
 #back::-webkit-input-placeholder{
     color:white;
 }
 
-//Set the position that display the location in weather page
+/* Set the position that display the location in weather page */
 .location{
     text-align: right;
     margin-top: -2vh;
@@ -105,7 +102,7 @@ body{
     font-weight: bold;
 }
 
-//Set the position of back button and style it 
+/* Back button styling */
 .backButton{
     max-width:40px;
     z-index:-100;
@@ -114,7 +111,7 @@ body{
     margin-left:6vw;
 }
 
-//Set the position of add favourite button and style it 
+/* Add Favourite styling  */
 .addFav{
     float:right;
     margin-right: 20px;
@@ -123,12 +120,11 @@ body{
     border-radius: 5px;
 }
 
-//Set the position to display the weather data
+/* Weather page styling */
 .displayData{
     margin-top: 7vh;
 }
 
-//Style the date info
 .date{
     font-size:3.5vh;
     color:orange;
@@ -136,12 +132,10 @@ body{
     font-weight: bold;
 }
 
-//Set the position of general info
 .generalInfo{
     margin-top: 20vh;
 }
 
-//Set the position for the current temperature and style it
 .currentTemp{
     text-align: center;
     font-size: 6vh;
@@ -150,7 +144,7 @@ body{
     text-shadow: 1px 1px black;
 }
 
-//Set the position for the maim weather condition and style it
+/* Weather conditions and description styling */
 .weatherMain{
     text-align: right;
     font-size: 4vh;
@@ -160,7 +154,6 @@ body{
     text-shadow: 1px 1px black;
 }
 
-//Set the position for the weather condition description and style it
 .weatherDescription{
     text-align: right;
     font-size: 2.7vh;
@@ -171,7 +164,7 @@ body{
     text-shadow: 2px 2px black;
 }
 
-//Style the weather data display in weather page
+/* Style the weather data display in weather page */
 .weatherData{
     color:yellow;
     font-weight: bold;
