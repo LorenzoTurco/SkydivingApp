@@ -8,8 +8,11 @@ import 'swiper/swiper-bundle.css'
 
 SwiperCore.use([Pagination])
 
+// Component for the swiper used to display the data recieved from the API call.
 const DisplayData = (data) => {
+    // Each slide in a swiper to be displayed
     const [slides, setSlides] = useState([]);
+    // Time labels
     const labels = []
     const dataPerDay = []
 
@@ -163,6 +166,8 @@ const DisplayData = (data) => {
         setSlides(tempSlides)
     }
 
+    // Every time the data passed to component updates,
+    // Re-render data
     useEffect(() => {
         getDataPerDay()
         getLabels()
@@ -178,11 +183,11 @@ const DisplayData = (data) => {
                 breakpoints={{
                     // when window width is >= 640px
                     640: {
-                    slidesPerView: 1,
+                        slidesPerView: 1,
                     },
                     // when window width is >= 768px
                     768: {
-                    slidesPerView: 2,
+                        slidesPerView: 2,
                     },
                 }}
             >
@@ -201,7 +206,7 @@ const Column = {
 
 const MultiColumn = {
     columnCount: "4",
-    height: "11em"
+    height: "11em",
 }
 
 const imgIcon = {

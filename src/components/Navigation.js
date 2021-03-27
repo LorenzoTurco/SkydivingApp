@@ -11,6 +11,8 @@ import LocationIcon from '../assets/location.png'
 import BookmarkIcon from '../assets/book_mark.png'
 import SettingsIcon from '../assets/setting.png'
 
+
+// Home page navigation options for each page.
 const Navigation = () => {
     return (
         <div>

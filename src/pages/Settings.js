@@ -2,6 +2,7 @@ import BackButton from '../components/BackButton'
 
 const Settings = () => {
 
+    // Changes the unit of measurement for weather in localstorage
     const switchUnit = () => {
         let currentUnit = localStorage.getItem('settings')
         if (currentUnit === 'Metric') {
@@ -11,6 +12,7 @@ const Settings = () => {
         }
     }
 
+    // Clears out the favourites in local storage
     const clearFavourites = () => {
         localStorage.removeItem('favourites')
     }

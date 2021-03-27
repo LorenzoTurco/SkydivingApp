@@ -12,6 +12,7 @@ import Error from './pages/Error'
 
 function App() {
 
+  // Check that settings in the local storage exist, if not set to default metric.
   useEffect(() => {
     let currentSettings = localStorage.getItem('settings')
     if (currentSettings === null) {
@@ -20,6 +21,7 @@ function App() {
 
   },[])
 
+  // Allows for client side routing, different routes load different pages.
   return (
     <BrowserRouter>
       <Switch>

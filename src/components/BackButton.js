@@ -1,6 +1,7 @@
 import { useHistory } from 'react-router-dom'
 import backIcon from '../assets/back-key-2.png'
 
+// Button to return to the homescreen
 const BackButton = () => {
     const history = useHistory()
 

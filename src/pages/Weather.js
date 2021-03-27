@@ -7,11 +7,21 @@ import AddFav from '../components/AddFav'
 import BackButton from '../components/BackButton'
 import LocationIcon from '../assets/location.png'
 
+import '../components/Navigation.css'
+
+// Page for displaying weather details about a specific location.
+
 const Weather = () => {
+    // History allows use of pushing to history to redirect.
     const history = useHistory()
+
+    // Weather information from API call
     const [data, setData] = useState(history.location.state)
+    
+    // URL parameter (e.g. if /weatherpage/london will be 'london')
     const { searchLocation } = useParams()
 
+    // Re-render data on change in the url or state passed to it.
     useEffect(() => {
         setData(history.location.state)
     }, [searchLocation, history.location.state])
@@ -36,7 +46,7 @@ const Weather = () => {
                         alt="location"
                     />
                 </p>
-                <img src={`http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`} style={{height:"70px", 
+                <img src={`http://openweathermap.org/img/wn/${data.list[0].weather[0].icon}@2x.png`} alt="" style={{height:"70px", 
                     width:"70px",float:"right", marginTop:"7vh", marginRight:"25vw"}}/>
                 <p className="weatherMain">
                     {data.list[0].weather[0].main} <br/>

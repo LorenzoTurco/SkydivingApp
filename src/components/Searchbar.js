@@ -4,10 +4,17 @@ import { useHistory } from 'react-router-dom'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
+// Searchbar for finding locations and then passing data to the weather page upon succesfully calling the API.
 const Searchbar = () => {
+    // Use input state
     const [location, setLocation] = useState('')
+
+    // Allows use of history to push and redirect.
     const history = useHistory()
 
+    // When user submits searchbar
+    // Call API, if succesful redirect.
+    // If non-successful code then reset field and stay.
     const onSubmit = async (e) => {
         e.preventDefault()
         if(!location) {
@@ -24,6 +31,7 @@ const Searchbar = () => {
         }
     }
 
+    // API call
     const getLocationWeather = async (location) => {
         let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&units=${localStorage.getItem('settings')}`
         const result = await fetch(url)

@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react'
 
+// Favourite icon images
 import EmptyMark from '../assets/book_mark.png'
 import FullMark from '../assets/book_mark_filled.png'
 
-// Passed locationName (e.g. london)
+// Props:
+// locationName (e.g. london)
 // and countryName (e.g. GB)
 const AddFav = (props) => {
     const [favouritesList, setFavouritesList] = useState(JSON.parse(localStorage.getItem('favourites')))
     const [existsAlready, setExistsAlready] = useState(false)
 
+    // If any of the favourites match the current location, set existsAlready to true.
     useEffect(() => {
         let returnVal
         if (favouritesList) {
@@ -17,6 +20,7 @@ const AddFav = (props) => {
         }
     }, [favouritesList, props])
 
+    // Favourite an item and add to localstorage.
     const onClickFav = () => {
         let favArray = JSON.parse(localStorage.getItem('favourites'))
 
@@ -47,7 +51,8 @@ const AddFav = (props) => {
     }
 
     return (
-        
+        // if the item already exists, coloured in icon
+        // otherwise empty icon to denote it not being favourited.
         existsAlready ? ( 
             <input className="addFav"
             type="image"
