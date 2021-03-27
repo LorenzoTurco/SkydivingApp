@@ -7,6 +7,8 @@ import AddFav from '../components/AddFav'
 import BackButton from '../components/BackButton'
 import LocationIcon from '../assets/location.png'
 
+import '../components/Navigation.css'
+
 const Weather = () => {
     const history = useHistory()
     const [data, setData] = useState(history.location.state)

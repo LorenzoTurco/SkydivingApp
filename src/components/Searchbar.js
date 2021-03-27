@@ -32,7 +32,7 @@ const Searchbar = () => {
     }
 
     return (
-        <form className="searchbar" onSubmit={onSubmit}>
+        <form className="search" onSubmit={onSubmit}>
             <input 
                 style={{}}
                 value={location}
