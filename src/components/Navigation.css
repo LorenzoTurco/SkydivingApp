@@ -109,7 +109,7 @@ body{
     float:right;
     margin-right: 20px;
     margin-top: 3vh;
-    background-color: hsl(318, 98%, 62%);
+    /* background-color: hsl(318, 98%, 62%); */
     border-radius: 5px;
 }
 
