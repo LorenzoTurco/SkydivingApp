@@ -1,14 +1,6 @@
 .body {
   width: 100%;
   height: 100vh;
-  background-color: lightblue;
-  background-image: linear-gradient(
-      rgba(85, 130, 141, 0.602),
-      rgba(90, 114, 124, 0.602)
-    ),
-    url("../assets/new.jpeg");
-  background-size: cover;
-  background-position: center;
 }
 .headingStyle {
   font-family: "Times New Roman", Times, serif;
