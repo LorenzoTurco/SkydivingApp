@@ -10,7 +10,6 @@ Installing Dependencies:
 
 npm install react-router-dom
 npm install swiper
-npm install react-iframe
 
 3)
 Delete src folder and replace with uploaded src files
