@@ -16,6 +16,7 @@ with uploaded src files
 
 4)
 Create a file called ".env" on the root level of the folder.
+As in literally JUST ".env" not "something.env"
 The same folder as package.json
 Write out:
 REACT_APP_API_KEY= efb5b3c76c397ec945b8c4fbf8b7f16b
