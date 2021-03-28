@@ -1,7 +1,7 @@
-import { useState,useEffect } from 'react'
-import { useHistory } from 'react-router-dom'
-import './Favourites.css';
-import BackButton from '../components/BackButton'
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import "./Favourites.css";
+import BackButton from "../components/BackButton";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -58,18 +58,26 @@ const Favourites = () => {
         }
     },[favouritesArray])
     
-    return(
+    return (
+    <div className="background">
+      <BackButton />
 
-        <div className="background">
-            <BackButton/>
-                
-            <form onSubmit={onSubmit}>  
-                <div>
-                    {buttonNames}
-                </div>   
-            </form>
-        </div>
-    )}
+      {/* <div className="container">
+        <button className="refresh" onClick={() => refresh()}>
+          Refresh
+        </button>
+      </div>
 
+      <div className="container">
+        <button className="clear" onClick={() => clear()}>
+          Clear
+        </button>
+      </div> */}
+      <form onSubmit={onSubmit}>
+        <div>{buttonNames}</div>
+      </form>
+    </div>
+  );
+}
 
-    export default Favourites
+export default Favourites;
