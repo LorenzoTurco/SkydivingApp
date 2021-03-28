@@ -34,6 +34,7 @@ const AddFav = (props) => {
                 ]
             }
             localStorage.setItem('favourites', JSON.stringify(temp))
+            setFavouritesList(temp)
         } else {
             let recordExists = favArray.favourite.findIndex(e => e.name === props.locationName && e.country === props.countryName)
             if (recordExists === -1) {
