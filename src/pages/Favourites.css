@@ -26,14 +26,14 @@
   box-shadow: 0 5px #666;
   transform: translateY(5%);
 }
-
+/* 
 .background {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
     rgba(0, 0, 0, 0.75)
   );
-}
+} */
 
 .container {
   padding-right: 25%;

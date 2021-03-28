@@ -4,22 +4,17 @@ import './Favourites.css';
 import BackButton from '../components/BackButton'
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-console.log(API_KEY)
-
-  var favouritesArray = getFavourites() 
-
-  function getFavourites(){ //returns an array of JSON objects marked as favorites from localstorage
-
-    favouritesArray = JSON.parse(localStorage.getItem('favourites'))
-    return favouritesArray
-}
-
 
 
 const Favourites = () => {
-
+    const [favouritesArray, setFavouritesArray] = useState(getFavourites())
     const [location, setLocation] = useState({})
     const history = useHistory()
+
+    function getFavourites(){ //returns an array of JSON objects marked as favorites from localstorage
+        let tempObject = JSON.parse(localStorage.getItem('favourites'))
+        return tempObject
+    }
 
     //redirects user to the relevant weather page based on form submission.
     const onSubmit = async (e) => {
@@ -36,84 +31,44 @@ const Favourites = () => {
 
     //Data is fetched
     const getLocationWeather = async (location) => {
-
         let url = `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${API_KEY}&units=${localStorage.getItem('settings')}`
         const result = await fetch(url)
         const data = await result.json()
         return data
     }
 
+    const [buttonNames, setButtonNames] = useState("")
 
-
-        const buttonNames = getLocationMap()
-
-
-        function getLocationMap(){ // creates a new favorite button for each JSON object in the favouritesArray
-        
+    useEffect(() => {
         if(favouritesArray){
-            return(
-            
-        (favouritesArray.favourite).map(favourite => 
-        
-            <div className="wrapper">
-        <button className="button" 
-        
-        value={favourite.name +"," + favourite.country}
-        onClick={(e) => setLocation(e.target.value)}
-        
-        >
-            
-        {favourite.name + ", "+favourite.country }
-        </button>
-        </div>
-        )
-        )}else{
-
+            setButtonNames(
+                (favouritesArray.favourite).map(favourite => 
+                    <div className="wrapper">
+                        <button className="button" 
+                            value={favourite.name +"," + favourite.country}
+                            onClick={(e) => setLocation(e.target.value)}
+                        >
+                            {favourite.name + ", "+favourite.country }
+                        </button>
+                    </div>
+                )
+            )
+        }else{
             console.log("empty")
-            
-        }}
-
-
-        function clear(){ //removes all favourites locations
-
-            localStorage.removeItem('favourites')
-            window.location.reload()
         }
-
-        function refresh(){ //updates the page
-            window.location.reload()
-
-        }
+    },[favouritesArray])
     
     return(
 
-            <div className="background">
-
+        <div className="background">
             <BackButton/>
-                    
-                <div className="container">
-                    <button className="refresh"onClick={() => refresh()}>Refresh</button>
-                </div>
-
-                <div className="container">
-               <button className="clear"onClick={() => clear()}>Clear</button>
-                </div>
-                <form onSubmit={onSubmit}> 
-
-                    
+                
+            <form onSubmit={onSubmit}>  
                 <div>
                     {buttonNames}
-                </div>
-                     
-                    
-
-                   
-                </form>
-
-
-            </div>
-
-
+                </div>   
+            </form>
+        </div>
     )}
 
 

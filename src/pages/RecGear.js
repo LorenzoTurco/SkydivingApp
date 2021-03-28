@@ -1,4 +1,4 @@
-import { useParams } from 'react-router';
+
 import './RecGear.css';
 import PARACHUTE from '../assets/parachute.jpg'
 import AAD from "../assets/aad.jpg"
