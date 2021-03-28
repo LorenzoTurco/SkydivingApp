@@ -1,18 +1,19 @@
-To run our project, first ensure that you've already installed npm. Then run 'npm start' on your terminal and the app should open on a new tab.
+To run our project:
 
-Installing Dependencies:
 1)
 npx create-react-app *folderName*
 
 2)
 cd into folder
+
+Installing Dependencies:
+
 npm install react-router-dom
 npm install swiper
 npm install react-iframe
 
 3)
-delete src folder and replace
-with uploaded src files
+Delete src folder and replace with uploaded src files
 
 4)
 Create a file called ".env" on the root level of the folder.
