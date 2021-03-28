@@ -179,47 +179,60 @@ body{
 
 /* Set the position for the change unit function and style the measurement */
 .changeUnit{
-    float:left;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: purple;
+    background-color: rgba(253, 244, 244, 0.2);
+    border: none;
+    border-radius: 10%;
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.1);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
     margin-top: 10vh;
-    margin-left: 2vw;
-    height:5vh;
-    width: 96vw;
-    border-radius: 10px;
-    background-color: white;
-    border: 0.5px solid black;
-    font-size: 2vh;
-    color:blue;
+    margin-left: 10vw;
 
 }
 
 /* Style the change unit button */
 .changeUnitButton{
-    height:5vh;
-    width: 75vw;
-    border:none;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
     outline: none;
-    text-align: left;
-    font-size: 2vh;
-    color:red;
-    border-radius: 10px;
-    background-color: white;
+    color: #fff;
+    background:none;
+    border: none;
+    border-radius: 10%;
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.1);
+    text-align: center;
 }
 
 
 /* Set the postion for clear favourites button and style it */
 .clearFavButton{
-    margin-top: 2vh;
-    margin-left: 2vw;
-    height:5vh;
-    width: 96vw;
-    border:none;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
     outline: none;
-    text-align: left;
-    border: 0.5px solid black;
-    font-size: 2vh;
-    color:red;
-    border-radius: 10px;
-    background-color: white;
+    color: #fff;
+    background-color: rgba(253, 244, 244, 0.2);
+    border: none;
+    border-radius: 10%;
+    text-shadow: 3px 6px rgba(50, 50, 70, 0.1);
+    text-align: center;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+    width:78vw;
+    height:12vh;
+    margin-top: 5vh;
+    margin-left: 10vw;
 }
 
 .changeUnitButton:hover, .clearFavButton:hover {
