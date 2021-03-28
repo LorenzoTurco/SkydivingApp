@@ -24,20 +24,20 @@ const Settings = () => {
 
     return (
         <div>
-            <BackButton />
-            <label>
-                <button 
+            <BackButton /><br></br>
+            <label className="changeUnit">
+                <button className="changeUnitButton"
                     onClick={switchUnit}
                 >
-                    Change Unit:
+                    Change Unit
                 </button>
                 {/* Simply lists the unit of measurement
                     If you want can put inside the button. Doesn't matter where it is
                     as long as it's there. */}
                 {measurement}
-            </label>
+            </label> 
             
-            <button 
+            <button className="clearFavButton"
                 onClick={clearFavourites}
             >
                 Clear Favourites
