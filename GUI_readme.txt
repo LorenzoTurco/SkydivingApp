@@ -24,5 +24,20 @@ REACT_APP_API_KEY= efb5b3c76c397ec945b8c4fbf8b7f16b
 
 and save.
 
-4)
+4.1)
+If you cannot create a file called ".env" due to system limitations
+try creating the file in a code editor like VsCode
+
+4.2)
+worst comes to worst go into the files:
+/pages/Favourites.js
+/components/SearchBar.js
+
+and set the 
+"const API_KEY ="
+line manually to the api key.
+should look like:
+    const API_KEY = "efb5b3c76c397ec945b8c4fbf8b7f16b"
+
+5)
 npm start
