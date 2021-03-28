@@ -176,3 +176,48 @@ body{
     background: rgba(192, 192, 192, 0.5);
     border-radius: 50px;
 }
+
+//Set the position for the change unit function and style the measurement
+.changeUnit{
+    float:left;
+    margin-top: 10vh;
+    margin-left: 2vw;
+    height:5vh;
+    width: 96vw;
+    border-radius: 10px;
+    background-color: white;
+    border: 0.5px solid black;
+    font-size: 2vh;
+    color:blue;
+
+}
+
+//Style the change unit button
+.changeUnitButton{
+    height:5vh;
+    width: 75vw;
+    border:none;
+    outline: none;
+    text-align: left;
+    font-size: 2vh;
+    color:red;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+//Set the postion for clear favourites button and style it
+.clearFavButton{
+    margin-top: 2vh;
+    margin-left: 2vw;
+    height:5vh;
+    width: 96vw;
+    border:none;
+    outline: none;
+    text-align: left;
+    border: 0.5px solid black;
+    font-size: 2vh;
+    color:red;
+    border-radius: 10px;
+    background-color: white;
+}
