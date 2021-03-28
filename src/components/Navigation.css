@@ -177,7 +177,7 @@ body{
     border-radius: 50px;
 }
 
-//Set the position for the change unit function and style the measurement
+/* Set the position for the change unit function and style the measurement */
 .changeUnit{
     float:left;
     margin-top: 10vh;
@@ -192,7 +192,7 @@ body{
 
 }
 
-//Style the change unit button
+/* Style the change unit button */
 .changeUnitButton{
     height:5vh;
     width: 75vw;
@@ -206,7 +206,7 @@ body{
 }
 
 
-//Set the postion for clear favourites button and style it
+/* Set the postion for clear favourites button and style it */
 .clearFavButton{
     margin-top: 2vh;
     margin-left: 2vw;
@@ -221,3 +221,7 @@ body{
     border-radius: 10px;
     background-color: white;
 }
+
+.changeUnitButton:hover, .clearFavButton:hover {
+    background-color: indigo;
+}   

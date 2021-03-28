@@ -1,4 +1,4 @@
-import { Autoplay } from 'swiper'
+
 import { useState } from 'react'
 import BackButton from '../components/BackButton'
 
