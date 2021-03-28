@@ -36,10 +36,13 @@ const Favourites = () => {
         const data = await result.json()
         return data
     }
-
+    
     const [buttonNames, setButtonNames] = useState("")
 
     useEffect(() => {
+        // If the favourites array is loaded in
+        // Map it to a list of buttons
+        // Run anytime favourites change
         if(favouritesArray){
             setButtonNames(
                 (favouritesArray.favourite).map(favourite => 

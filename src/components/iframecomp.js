@@ -1,6 +1,10 @@
 import React from 'react';
 import BackButton1 from './BackButton_1.js'
+
+// Component to embed map
+
 export default class IframeComponent extends React.Component {
+  // Use iframe to embed map
   render() {
     return (
       <div>

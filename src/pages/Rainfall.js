@@ -3,16 +3,8 @@ import { render } from 'react-dom';
 import IframeComponent from '../components/iframecomp';
 import '../index.css';
 
-
+// Displays rainfall map
 class RainfallMap extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      name: 'React'
-    };
-  }
-
 
   render() {
     return (
