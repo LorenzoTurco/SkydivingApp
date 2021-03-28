@@ -34,7 +34,7 @@ const Weather = () => {
             />
             <Searchbar />
             <div className="generalInfo">
-                <p className="currentTemp"> {parseInt(data.list[0].main.temp)}&#176; </p>
+                <p className="currentTemp"> {parseInt(data.list[0].main.temp)}&#176;{localStorage.getItem('settings')==="Metric"? "C" : "F"}</p>
                 <p className="location"> 
                     {data.city.name}, {data.city.country}
                     <input
